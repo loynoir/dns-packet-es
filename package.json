@@ -1,11 +1,16 @@
 {
-  "name": "dns-packet",
+  "name": "dns-packet-es",
   "version": "5.2.1",
   "description": "An abstract-encoding compliant module for encoding / decoding DNS packets",
-  "author": "Mathias Buus",
+  "main": "lib/index.js",
+  "module": "lib/es/index.mjs",
+  "types": "types/index.d.ts",
+  "browser": "dst/index.min.js",
+  "entry": "dst/es/index.min.mjs",
+  "author": "loynoir",
   "license": "MIT",
-  "repository": "mafintosh/dns-packet",
-  "homepage": "https://github.com/mafintosh/dns-packet",
+  "repository": "loynoir/dns-packet-es",
+  "homepage": "https://github.com/loynoir/dns-packet-es",
   "engines": {
     "node": ">=6"
   },
@@ -17,17 +22,7 @@
     "coverage": "nyc -r html npm test"
   },
   "dependencies": {
-    "ip": "^1.1.5"
-  },
-  "devDependencies": {
-    "eslint": "^5.14.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "nyc": "^13.3.0",
-    "tape": "^4.10.1"
+    "ip-es": "git://github.com/loynoir/ip-es.git"
   },
   "keywords": [
     "dns",
@@ -36,13 +31,5 @@
     "encoding",
     "encoder",
     "abstract-encoding"
-  ],
-  "files": [
-    "index.js",
-    "types.js",
-    "rcodes.js",
-    "opcodes.js",
-    "classes.js",
-    "optioncodes.js"
   ]
 }
